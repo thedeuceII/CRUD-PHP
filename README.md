@@ -19,31 +19,22 @@ It's very easy to setup up a new application.
 
 * Iinsert the informations about your host on config/config.inc.php and include this file at the begining of your application.
 
-  <?php include_once('../config/config.inc.php'); ?>
+  		<?php include_once('../config/config.inc.php'); ?>
 
 * After that, for each table that you need just create a php file inside the folder classes with the name of your class extending MainConnection.
   
-  //file "/classes/Production.class.php"
-  
-  
-  class Production extends MainConnection
-  
-  
-  {
-  
-  
-  	   protected $table = "your table";
-	
-	     protected $primaryKey = "your table primary key";
-  
-  }
+		  //file "/classes/Production.class.php"
+		  class Production extends MainConnection
+		  {
+		  	protected $table = "your table";
+			protected $primaryKey = "your table primary key";
+		  }
 
 * Call your new class in your file without includes. There is a feature to autoload your classes.
 
 
-  $production = new Production;
-
-  $allProduction = $production->listAll();
+		$production = new Production;
+		$allProduction = $production->listAll();
 
 
 
