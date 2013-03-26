@@ -5,7 +5,6 @@ CRUD-PHP is a very easy way to start your small application without setup a lot 
 To get started, checkout https://github.com/wildiney/CRUD-PHP!
 
 
-
 ## Quick start
 
 * [Download the latest release](https://github.com/wildiney/CRUD-PHP)
@@ -73,3 +72,12 @@ Before opening any issue, please search for existing issues.
 + http://twitter.com/wildiney
 
 + http://github.com/wildiney
+
+
+
+## Donations
+
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YJMGUJC4EJP3S"><img src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donation" /></a>
+
+
+
