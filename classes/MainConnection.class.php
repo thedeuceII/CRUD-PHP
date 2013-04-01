@@ -206,7 +206,7 @@ abstract class MainConnection {
                 $values .= ",";
             }
         }
-        $query .= $campos . ") VALUES (" . $values . ")";
+        $query .= $fields . ") VALUES (" . $values . ")";
         return $this->execSQL($query);
     }
 
