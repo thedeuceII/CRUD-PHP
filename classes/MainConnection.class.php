@@ -23,13 +23,12 @@ abstract class MainConnection {
      *
      * Start the conection with the database
      *
-     * @todo protect the static var
      * @access public
      * @name $connection
      * @staticvar string $connection
      * @var static
      */
-    static    $connection;
+    protected static $connection;
 
     /**
      * $table
@@ -83,7 +82,7 @@ abstract class MainConnection {
      */
     public function __construct() {
         global $bdconfig;
-        if (!$this->connection) {
+        if (!isset($this->connection)) {
             $this->connection = new mysqli($bdconfig['server'], $bdconfig['user'], $bdconfig['password'], $bdconfig['database']);
             if (mysqli_connect_errno()) {
                 trigger_error(mysqli_connect_error());
@@ -106,12 +105,20 @@ abstract class MainConnection {
         global $config;
         if($config['debug']){
             echo "<div style='word-wrap:break-word; position:fixed; bottom:0; border: 1px solid red; width:auto; padding:10px; font-size:9px;'><pre>";
-            echo "<p>ERROS<p>";
-            print_r($errors);
-            echo "<p>DEBUG</p>";
-            print_r($this->debug);
+            if(isset($this->errors)){
+				echo "<p>ERROS<p>";
+            	print_r($this->errors);
+			}
+            if(isset($this->debug)){
+				echo "<p>DEBUG</p>";
+            	print_r($this->debug);
+			}
+			if(isset($_SESSION)){
+	            echo "<p>SESSIONS</p>";
+    	        print_r($_SESSION);
+			}
             echo "</pre></div>";
-        };
+        }
     }
 
     /**
