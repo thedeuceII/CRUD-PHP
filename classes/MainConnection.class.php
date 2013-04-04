@@ -77,11 +77,11 @@ abstract class MainConnection {
     /**
      * Method Constructor
      *
-     * @method __construct
      * @return $this->connection
      */
     public function __construct() {
         global $bdconfig;
+
         if (!isset($this->connection)) {
             $this->connection = new mysqli($bdconfig['server'], $bdconfig['user'], $bdconfig['password'], $bdconfig['database']);
             if (mysqli_connect_errno()) {
@@ -89,6 +89,7 @@ abstract class MainConnection {
             }
             $this->connection->set_charset("utf8");
         }
+
     }
 
     /**
@@ -104,7 +105,7 @@ abstract class MainConnection {
          */
         global $config;
         if($config['debug']){
-            echo "<div style='word-wrap:break-word; position:fixed; bottom:0; border: 1px solid red; width:auto; padding:10px; font-size:9px;'><pre>";
+            echo "<div style='word-wrap:break-word; bottom:0; border: 1px solid red; width:auto; padding:10px; font-size:9px;'><pre>";
             if(isset($this->errors)){
 				echo "<p>ERROS<p>";
             	print_r($this->errors);
@@ -217,7 +218,7 @@ abstract class MainConnection {
         $query .= $fields . ") VALUES (" . $values . ")";
         return $this->execSQL($query);
     }
-	
+
 	 /**
      * Method delete
      *

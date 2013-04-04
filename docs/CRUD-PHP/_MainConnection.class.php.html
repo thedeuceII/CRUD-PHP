@@ -30,11 +30,6 @@
   <tr valign="top">
     <td width="195" class="menu">
 		<div class="package-title">CRUD-PHP</div>
-  <div class="package">
-	<div id="todolist">
-			<p><a href="../todolist.html">Todo List</a></p>
-	</div>
-	</div>
       <b>Packages:</b><br />
   <div class="package">
               <a href="../li_CRUD-PHP.html">CRUD-PHP</a><br />
@@ -152,11 +147,53 @@ Source Location: /MainConnection.class.php<br /><br />
 				|						<span class="disabled">Functions</span>
 		</div>
 		<div class="info-box-body">
-			<a name="functionexecSQL" id="functionexecSQL"><!-- --></a>
+			<a name="functiondelete" id="functiondelete"><!-- --></a>
 <div class="evenrow">
 
 	<div>
-		<span class="method-title">execSQL</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 145]</span>
+		<span class="method-title">delete</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 230]</span>
+	</div>
+<br />
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code-border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>bool delete(
+ $primaryKey, array $data&nbsp;
+)</code>
+    </td></tr></table>
+    </td></tr></table>
+
+		<p align="center" class="short-description"><strong>Method delete
+</strong></p>
+<span class="description"><p>Method to delete data</p></span>
+    		<strong>Parameters:</strong><br />
+			<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td class="indent">
+				<span class="var-type">array</span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$data:&nbsp;</span></td>
+				<td>
+							</td></tr>
+					<tr><td class="indent">
+				<span class="var-type"></span>&nbsp;&nbsp;</td>
+				<td>
+				<span class="var-name">$primaryKey:&nbsp;</span></td>
+				<td>
+							</td></tr>
+				</table>
+	
+<br />
+	
+
+		<br />
+	<div class="top">[ <a href="#top">Top</a> ]</div>
+	</div>
+	</div>
+<a name="functionexecSQL" id="functionexecSQL"><!-- --></a>
+<div class="oddrow">
+
+	<div>
+		<span class="method-title">execSQL</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 153]</span>
 	</div>
 <br />
 	<div class="function">
@@ -189,10 +226,10 @@ string $query&nbsp;
 	</div>
 	</div>
 <a name="functioninsert" id="functioninsert"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div>
-		<span class="method-title">insert</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 196]</span>
+		<span class="method-title">insert</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 205]</span>
 	</div>
 <br />
 	<div class="function">
@@ -225,10 +262,10 @@ array $data&nbsp;
 	</div>
 	</div>
 <a name="functionlistAll" id="functionlistAll"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div>
-		<span class="method-title">listAll</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 167]</span>
+		<span class="method-title">listAll</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 175]</span>
 	</div>
 <br />
 	<div class="function">
@@ -273,10 +310,10 @@ array $data&nbsp;
 	</div>
 	</div>
 <a name="functionlistByKey" id="functionlistByKey"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div>
-		<span class="method-title">listByKey</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 183]</span>
+		<span class="method-title">listByKey</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 191]</span>
 	</div>
 <br />
 	<div class="function">
@@ -309,10 +346,10 @@ string $key&nbsp;
 	</div>
 	</div>
 <a name="functionsetPrimaryKey" id="functionsetPrimaryKey"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div>
-		<span class="method-title">setPrimaryKey</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 135]</span>
+		<span class="method-title">setPrimaryKey</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 143]</span>
 	</div>
 <br />
 	<div class="function">
@@ -352,10 +389,10 @@ string $primaryKey&nbsp;
 	</div>
 	</div>
 <a name="functionsetTable" id="functionsetTable"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div>
-		<span class="method-title">setTable</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 124]</span>
+		<span class="method-title">setTable</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 132]</span>
 	</div>
 <br />
 	<div class="function">
@@ -395,10 +432,10 @@ string $table&nbsp;
 	</div>
 	</div>
 <a name="functionupdate" id="functionupdate"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div>
-		<span class="method-title">update</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 222]</span>
+		<span class="method-title">update</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 244]</span>
 	</div>
 <br />
 	<div class="function">
@@ -437,10 +474,10 @@ string $key, array $data&nbsp;
 	</div>
 	</div>
 <a name="functionupdateByField" id="functionupdateByField"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div>
-		<span class="method-title">updateByField</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 247]</span>
+		<span class="method-title">updateByField</span>&nbsp;&nbsp;<span class="smalllinenumber">[line 269]</span>
 	</div>
 <br />
 	<div class="function">
@@ -489,7 +526,7 @@ string $fieldKey, mixed $key, array $data&nbsp;
 
         <div class="credit">
 		    <hr class="separator" />
-		    Documentation generated on Tue, 26 Mar 2013 13:40:50 +0000 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Thu, 04 Apr 2013 19:06:21 +0000 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>
