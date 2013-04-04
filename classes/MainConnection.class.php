@@ -189,7 +189,8 @@ abstract class MainConnection {
      */
     public function listByKey($key){
         $query = "SELECT * FROM " . $this->table . " WHERE " . $this->primaryKey . "='" . $key ."'";
-        return $this->execSQL($query);
+		$result = $this->execSQL($query);
+        return $result->fetch_object();
     }
 
     /**
@@ -202,18 +203,31 @@ abstract class MainConnection {
      */
     public function insert($data){
         $query = 'INSERT INTO ' . $this->table . ' (';
-        $fields = count($data);
+        $num_fields = count($data);
         $counter = 0;
         foreach($data as $field=>$value){
             $fields .= "$field";
             $values .= "'$value'";
             $counter++;
-            if($counter != $fields){
+            if($counter != $num_fields){
                 $fields .= ",";
                 $values .= ",";
             }
         }
         $query .= $fields . ") VALUES (" . $values . ")";
+        return $this->execSQL($query);
+    }
+	
+	 /**
+     * Method delete
+     *
+     * Method to delete data
+     *
+     * @param array $data
+     * @return bool
+     */
+	public function delete($primaryKey){
+        $query = 'DELETE FROM ' . $this->table . ' WHERE ' . $this->primaryKey . " = $primaryKey";
         return $this->execSQL($query);
     }
 
